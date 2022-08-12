@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --white: hsl(0, 0%, 100%);
+/* Background gradient: */
+
+--soft-violet: hsl(273, 75%, 66%);
+--soft-blue: hsl(240, 73%, 65%);
+
+/* #### Text */
+
+--very-dark-grayish-blue: hsl(237, 12%, 33%);
+--dark-grayish-blue: hsl(240, 6%, 50%);
+
+/* #### Dividers */
+
+--light-grayish-blue: hsl(240, 5%, 91%);
+
+}
+
+body {
+  margin: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to bottom, var(--soft-violet), var(--soft-blue));
+  /* background-repeat: no-repeat;
+  min-height: calc(100vh - 0.01px);
+  font-size: 12px;
+  padding:  1.25rem; */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container
+{
+  width: 400px;
+  background-color: var(--white);
+  padding:  1.50rem;
+  border-radius: 1.75rem;
+}
+
+.desktop-img
+{
+  display: none;
+}
+
+.container h1
+{
+  text-align: center;
+  color: var(--very-dark-desaturated-blue);
+  font-size: 2rem;
+  margin: 1.5rem 0 1.25rem;
+}
+
+.article-question
+{
+  border-bottom: 0.1rem solid var(--light-grayish-blue);
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+
+
+.article-question article
+{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  margin-bottom: 0.5rem;
+}
+
+.article-question article h2
+{
+  color: var(--very-dark-grayish-blue);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.article-question article h2.clicked{
+  font-weight:700;
+}
+
+.article-question article p
+{
+  color: var(--dark-grayish-blue);
+}
+
+.icon
+{
+  color: var(--soft-red);
+}
+
+@media (min-width: 768px){
+
+ .container
+ {
+  width: 700px;
+ }
+
+ .mobile-img
+ {
+   display: none;
+ }
+   .desktop-img
+ {
+  display: block;
+  margin: 0 auto;
+ }
+
+}
+@media (min-width: 1024px){
+  .container
+  {
+    width: 992px;
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+  }
+
+  .main-images-container
+  {
+    margin-right: 30px;
+  }
+
+  .container h1
+{
+  text-align: left;
+}
+
+  .container .faq-container
+  {
+  width: 450px;
+  }
+
+}
